@@ -21,3 +21,20 @@ public class NumberClassifierTest {
         assertEquals("Equal", NumberClassifier.classifyNumbers(arr));
     }
 }
+@Test
+public void testEmptyArray() {
+    int[] arr = {};
+    assertEquals("Equal", NumberClassifier.classifyNumbers(arr));
+}
+
+@Test
+public void testMixedMoreEvens() {
+    int[] arr = {2, 4, 6, 1};
+    assertEquals("More evens", NumberClassifier.classifyNumbers(arr));
+}
+
+@Test
+public void testMixedMoreOdds() {
+    int[] arr = {1, 3, 5, 2};
+    assertEquals("More odds", NumberClassifier.classifyNumbers(arr));
+}
